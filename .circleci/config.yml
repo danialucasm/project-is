@@ -32,11 +32,12 @@ jobs:
       - run:
           name: Run tests
           command: npm test #Busca el archivo de testeo y lo ejecuta
-  deploy:
-    docker:
-      - image: cimg/node:15.1
-    steps:
       - heroku/deploy-via-git 
+  # deploy:
+  #   docker:
+  #     - image: cimg/node:15.1
+  #   steps:
+  #     - heroku/deploy-via-git 
 
       
 # workflows:
@@ -57,7 +58,7 @@ workflows:
   sample:
     jobs:
       - build-and-run
-      - deploy:
-          requires:
-            - build-and-run
+      # - deploy:
+      #     requires:
+      #       - build-and-run
       
