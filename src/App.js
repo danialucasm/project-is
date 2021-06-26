@@ -23,7 +23,7 @@ function App() {
           Si supera los 30 se trata de obesidad. <br/>
         </div>
         <div>
-          <label style={{fontSize: 25, fontFamily :'serif'}}>Peso Actual: </label>
+          <label style={{fontSize: 25, fontFamily :'serif'}}>Peso Actual (Ej: 68.9kg): </label>
           <input  
             type='number'   
             min= '0'    
@@ -31,7 +31,7 @@ function App() {
             style={{fontSize: 20, width: 90, textAlign: 'center'}}
             onChange={(e) => setNumA(+e.target.value)}
           />
-          <label style={{fontSize: 25, marginLeft: 30, fontFamily:'serif' }}>  Estatura: </label>
+          <label style={{fontSize: 25, marginLeft: 30, fontFamily:'serif' }}>  Estatura (Ej: 1.60m): </label>
           <input
             type='number'
             min='0'
