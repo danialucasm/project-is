@@ -33,32 +33,11 @@ jobs:
           name: Run tests
           command: npm test #Busca el archivo de testeo y lo ejecuta
       - heroku/deploy-via-git 
-  # deploy:
-  #   docker:
-  #     - image: cimg/node:15.1
-  #   steps:
-  #     - heroku/deploy-via-git 
-
-      
-# workflows:
-#   # Below is the definition of your workflow.
-#   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
-#   # CircleCI will run this workflow on every commit.
-#   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-#   sample: 
-#     jobs:
-#       - build-and-test:
-#           context:
-#           filters:
-#             tags:
-#               only: /^v.*/
       # For running simple node tests, you could optionally use the node/test job from the orb to replicate and replace the job above in fewer lines.
       # - node/test
 workflows:
   sample:
     jobs:
       - build-and-run
-      # - deploy:
-      #     requires:
-      #       - build-and-run
+
       
